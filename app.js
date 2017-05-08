@@ -6,10 +6,10 @@ window.onload = function() {
     window.addEventListener('keyup', function(e) {
       pressed.push(e.key)
       pressed.splice(-secretCode.length - 1, pressed.length - secretCode.length)
-      console.log(pressed.join(''));
 
-      if (pressed.join('') === secretCode) {
-      
+      if (pressed.join('').includes(secretCode)) {
+        console.log('you got it!');
+        cornify_add()
       }
     })
 }
